@@ -1,3 +1,6 @@
+
+
+
 import java.util.Objects;
 public class Candidate {
     private int studentID;
