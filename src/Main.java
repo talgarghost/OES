@@ -19,16 +19,18 @@ public class Main {
             // Проверка подключения
             DBConnection.getConnection();
             System.out.println("Connection successful!");
-
+            QuestionDAO qod=new QuestionDAO();
+                    qod.addQuestion("what is java", "java is programming language",12.5);
+            qod.getAllQuestions();
             // CRUD
             CandidateDAO dao = new CandidateDAO();
 
             // INSERT
-            dao.addCandidate("ALI Parhul", "ALI008@mail.com", "ONLINE");
+            dao.addCandidate("asik Parhul", "ALI008@mail.com", "ONLINE");
 
             // SELECT
             dao.getAllCandidates();
-
+            dao.deleteCandidate(2);
 
 
         } catch (Exception e) {
